@@ -1,156 +1,53 @@
-/* default css start */
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========Choose Your Destination========== */
+.travel_destinations {
+  text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Mulish", sans-serif;
-}
-
-section {
-  margin: 100px 0px;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
+.travel_destinations .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 12px;
   margin: 0 auto;
 }
 
-.color-check {
-  color: #424247;
-}
-
-:root {
-  --primary-color: #ff5400;
-  --secondary-color: #424247;
-  --white-text-color: #fff;
-  --heder-text-black: #131318;
-}
-
-h1 {
-  color: var(--white-text-color);
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 5rem;
-}
-
-h2 {
-  color: var(--heder-text-black);
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 3.125rem;
-}
-
-h3 {
-  color: var(--heder-text-black);
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 2.5rem;
-}
-
-h4 {
-  color: var(--white-text-color);
-  font-size: 1.75rem;
-  font-weight: 800;
-  line-height: 2rem;
-}
-
-h5 {
-  color: var(--heder-text-black);
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1.875rem;
-}
-
-h6 {
-  color: var(--white-text-color);
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1.5625rem;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.625rem;
-}
-
-/* default css end */
-
-/* ==========Choose Your Destination========== */
-.destination {
-  text-align: center;
-}
-
-.information-images p {
+.travel_destinations .information p {
   margin: 24px 0 48px 0;
 }
 
-.images-grides .row.first {
+.images-layout .first-row {
   display: grid;
   grid-template-columns: 1fr 1.7fr 2.4fr;
   column-gap: 10px;
   margin-bottom: 24px;
 }
-.images-grides .row.second {
+
+.images-layout .second-row {
   display: grid;
   grid-template-columns: 2.4fr 1.7fr 1fr;
   column-gap: 24px;
   margin-bottom: 24px;
 }
 
-.images-grides img {
+.images-layout img {
   width: 100%;
   height: 250px;
 }
 
-.images-grides .row.first .mal,
-.images-grides .row.first .indo,
-.images-grides .row.first .bang,
-.images-grides .row.second .sril,
-.images-grides .row.second .north,
-.images-grides .row.second .kash {
+.images-layout .first-row .column-first,
+.images-layout .first-row .column-second,
+.images-layout .first-row .column-third,
+.images-layout .second-row .column-first,
+.images-layout .second-row .north,
+.images-layout .second-row .column-third {
   position: relative;
 }
 
-.mal .images-title,
-.indo .images-title,
-.sril .images-title,
-.north .images-title,
-.kash .images-title,
-.bang .images-title,
+.column-first .images-title,
+.column-second .images-title,
+.column-first .images-title,
+.column-second.images-title,
+.column-third .images-title,
+.column-third .images-title,
 .band .images-title {
   position: absolute;
   top: 50%;
@@ -192,18 +89,18 @@ p {
     font-size: 1rem;
   }
 
-  .images-grides img {
+  .images-layout img {
     width: 100%;
     height: 200px;
   }
 
-  .images-grides .row.first {
+  .images-layout .first-row {
     row-gap: 10px;
     margin-bottom: 10px;
     grid-template-columns: 1fr;
   }
 
-  .images-grides .row.second {
+  .images-layout .second-row {
     grid-template-columns: 1fr;
     margin-bottom: 10px;
     row-gap: 10px;
@@ -239,17 +136,18 @@ p {
     font-size: 1rem;
   }
 
-  .images-grides img {
+  .images-layout img {
     width: 100%;
     height: 300px;
   }
 
-  .images-grides .row.first {
+  .images-layout .first-row {
     grid-template-columns: 1fr;
     row-gap: 10px;
     margin-bottom: 10px;
   }
-  .images-grides .row.second {
+
+  .images-layout .second-row {
     grid-template-columns: 1fr;
     row-gap: 10px;
   }
@@ -284,13 +182,13 @@ p {
     font-size: 1rem;
   }
 
-  .images-grides img {
+  .images-layout img {
     width: 100%;
     height: 250px;
   }
 
-  .images-grides .row.second,
-  .images-grides .row.first {
+  .images-layout .second-row,
+  .images-layout .first-row {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     margin-bottom: 10px;
@@ -326,18 +224,17 @@ p {
     font-size: 1rem;
   }
 
-  .images-grides img {
+  .images-layout img {
     width: 100%;
     height: 250px;
   }
 
-  .images-grides .row.second,
-  .images-grides .row.first {
+  .images-layout .second-row,
+  .images-layout .first-row {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     margin-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {}
